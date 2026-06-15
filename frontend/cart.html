@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Cart</title>
+  <link rel="stylesheet" href="./css/styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand" onclick="location.href='./index.html'">🛍️ Shop</div>
+    <nav class="nav">
+      <a href="./cart.html" class="nav-link">Cart</a>
+      <a id="authLink" href="./login.html" class="nav-link">Login</a>
+      <button id="logoutBtn" class="nav-link btn-link" style="display:none;">Logout</button>
+    </nav>
+  </header>
+
+  <main class="container">
+    <div class="page">
+      <h1 style="margin-top:0">Cart</h1>
+      <div id="cartEmpty" class="toast" style="display:none">Your cart is empty.</div>
+
+      <table class="table" aria-label="Cart items">
+        <thead>
+          <tr>
+            <th>Product</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Line total</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody id="cartItems"></tbody>
+      </table>
+
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:14px;flex-wrap:wrap">
+        <div class="small">Total</div>
+        <div id="cartTotal" style="font-weight:900;font-size:18px">$0.00</div>
+      </div>
+
+      <div style="margin-top:14px;display:flex;gap:12px;flex-wrap:wrap">
+        <button id="checkoutBtn" class="btn btn-primary">Checkout</button>
+        <button id="clearBtn" class="btn">Clear cart</button>
+        <a class="btn" href="./index.html">Continue shopping</a>
+      </div>
+
+      <div id="cartToast" class="toast" style="display:none;margin-top:14px"></div>
+    </div>
+  </main>
+
+  <script type="module" src="./js/cart.js"></script>
+  <script type="module" src="./js/auth.js"></script>
+  <script>
+    document.getElementById('clearBtn')?.addEventListener('click', () => {
+      localStorage.removeItem('cart');
+      location.reload();
+    });
+  </script>
+</body>
+</html>
+

@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Register</title>
+  <link rel="stylesheet" href="./css/styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand" onclick="location.href='./index.html'">🛍️ Shop</div>
+    <nav class="nav">
+      <a href="./cart.html" class="nav-link">Cart</a>
+      <a id="authLink" href="./login.html" class="nav-link">Login</a>
+      <button id="logoutBtn" class="nav-link btn-link" style="display:none;">Logout</button>
+    </nav>
+  </header>
+
+  <main class="container">
+    <div class="page">
+      <h1 style="margin-top:0">Register</h1>
+      <form id="registerForm" class="form">
+        <div>
+          <div class="label">Name (optional)</div>
+          <input id="name" type="text" />
+        </div>
+        <div>
+          <div class="label">Email</div>
+          <input id="email" type="email" required />
+        </div>
+        <div>
+          <div class="label">Password</div>
+          <input id="password" type="password" required />
+        </div>
+        <button class="btn btn-primary" type="submit">Create account</button>
+        <div class="small">Already have an account? <a href="./login.html" style="color:var(--brand)">Login</a></div>
+      </form>
+      <div id="authToast" class="toast err" style="display:none;margin-top:14px"></div>
+    </div>
+  </main>
+
+  <script type="module" src="./js/auth.js"></script>
+</body>
+</html>
+

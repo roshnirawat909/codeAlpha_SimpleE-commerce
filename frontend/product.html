@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Product Details</title>
+  <link rel="stylesheet" href="./css/styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand" onclick="location.href='./index.html'">🛍️ Shop</div>
+    <nav class="nav">
+      <a href="./cart.html" class="nav-link">Cart</a>
+      <a id="authLink" href="./login.html" class="nav-link">Login</a>
+      <button id="logoutBtn" class="nav-link btn-link" style="display:none;">Logout</button>
+    </nav>
+  </header>
+
+  <main class="container">
+    <div id="productDetail" class="page"></div>
+  </main>
+
+  <script type="module" src="./js/productDetail.js"></script>
+  <script type="module" src="./js/auth.js"></script>
+</body>
+</html>
+
