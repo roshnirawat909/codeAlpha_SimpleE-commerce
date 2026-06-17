@@ -50,7 +50,7 @@ function render() {
   // We already store only productId+quantity; to show total we can fetch all products.
   // For simplicity, fetch sequentially.
   return Promise.all(items.map(async i => {
-    const p = await apiFetch(`/api/products/${i.productId}`);
+    const p = await apiFetch(`/api/fake-products/${i.productId}`);
     const qty = Number(i.quantity || 0);
     const line = p.price * qty;
     total += line;

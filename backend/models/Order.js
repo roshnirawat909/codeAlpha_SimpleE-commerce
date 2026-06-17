@@ -2,7 +2,8 @@ const mongoose = require('mongoose');
 
 const orderItemSchema = new mongoose.Schema(
   {
-    productId: { type: mongoose.Schema.Types.ObjectId, ref: 'Product', required: true },
+    // Cart uses Fake Store ids (e.g. "1","2"), so keep productId as a string.
+    productId: { type: String, required: true },
     name: { type: String, required: true },
     price: { type: Number, required: true, min: 0 },
     quantity: { type: Number, required: true, min: 1 }
