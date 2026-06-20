@@ -1,4 +1,4 @@
-# CodeAlpha_SimpleEcommerce
+# SimpleEcommerce
 
 Simple full-stack e-commerce store:
 - Products (listing + details)
@@ -10,7 +10,7 @@ Simple full-stack e-commerce store:
 
 ## Folder Structure
 ```
-CodeAlpha_SimpleEcommerce/
+SimpleEcommerce/
   frontend/
     index.html
     product.html
@@ -57,7 +57,7 @@ CodeAlpha_SimpleEcommerce/
 
 ## Backend Setup
 ```bat
-cd C:/Users/HP/Desktop/CodeAlpha_SimpleEcommerce/backend
+cd C:/Users/HP/Desktop/SimpleEcommerce/backend
 npm install
 copy .env.example .env
 ```
